@@ -800,14 +800,14 @@ while True:
                     nncar.angle = 180
                     nncar.collided = False
                 generateRandomMap(gameDisplay)
-                bg = pygame.image.load('randomGeneratedTrackFront.png') #Fondo
-                bg4 = pygame.image.load('randomGeneratedTrackBack.png') #Checkeo transparencia
+                bg = pygame.image.load('randomGeneratedTrackFront.png')
+                bg4 = pygame.image.load('randomGeneratedTrackBack.png')
 
             if event.key == ord ( "b" ):
                 if (len(selectedCars) == 2):
                     for nncar in nnCars:
                         nncar.score = 0
-                    #Creo la nueva lista de autos mejorados
+               
                     alive = num_of_nnCars
                     generation += 1
                     selected = 0
@@ -852,7 +852,7 @@ while True:
                 if (len(selectedCars) == 2):
                     for nncar in nnCars:
                         nncar.score = 0
-                    #Creo la nueva lista de autos mejorados
+                   
                     alive = num_of_nnCars
                     generation += 1
                     selected = 0
@@ -899,8 +899,8 @@ while True:
                         nncar.angle = 180
                         nncar.collided = False
                     generateRandomMap(gameDisplay)
-                    bg = pygame.image.load('randomGeneratedTrackFront.png') #Fondo
-                    bg4 = pygame.image.load('randomGeneratedTrackBack.png') #Checkeo transparencia
+                    bg = pygame.image.load('randomGeneratedTrackFront.png')
+                    bg4 = pygame.image.load('randomGeneratedTrackBack.png')
             if event.key == ord ( "r" ):
                 generation = 1
                 alive = num_of_nnCars
@@ -937,7 +937,7 @@ while True:
                 mutationRate = 90
 
         
-        if event.type == pygame.MOUSEBUTTONDOWN: #Hacer click en autos solo los agrega/borra de una lista y agranda/achica
+        if event.type == pygame.MOUSEBUTTONDOWN:
             #This returns a tuple:
             #(leftclick, middleclick, rightclick)
             #Each one is a boolean integer representing button up/down.
@@ -986,7 +986,7 @@ while True:
                             alive -= 1
                         break
 
-    keys = pygame.key.get_pressed()  #checking pressed keys
+    keys = pygame.key.get_pressed()
     if keys[pygame.K_LEFT]:
         car.rotate(-5)
     if keys[pygame.K_RIGHT]:
@@ -998,9 +998,9 @@ while True:
     if keys[pygame.K_DOWN]:
         car.set_accel(-0.2)
       
-    redrawGameWindow() #En cada frame redibujo todo: Fondo negro, piso blanco, dinosaurio    
+    redrawGameWindow()   
     
-    clock.tick(FPS) # Si FPS = 30 entonces maximo se hacen 30 loops en un segundo
+    clock.tick(FPS)
 
 
 
